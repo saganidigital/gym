@@ -31,7 +31,7 @@ An ultra-modern, high-intensity front-end web application built for gym lovers, 
 
 ### Run Locally
 ```bash
-node server.js
+node local-server.js
 ```
 Then navigate to `http://localhost:3000` in your web browser.
 
