@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRONPULSE ELITE // Hyper-Performance Athletic Club</title>
+  <meta name="description" content="Welcome to IRONPULSE ELITE. The ultimate dark-aesthetic athletic club built for hypertrophy, biometric performance, powerlifting, and luxury recovery.">
+  
+  <!-- Google Fonts: Syne (Headings), Outfit (Body/UI), Bebas Neue (Athletic Display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+  <div class="ambient-glow glow-center"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">IRON<span class="text-lime">PULSE</span></span>
+        <span class="logo-badge">ELITE</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#programs" class="nav-link" id="navLinkPrograms">Programs</a>
+        <a href="#facilities" class="nav-link" id="navLinkFacilities">Facilities</a>
+        <a href="#calculator" class="nav-link" id="navLinkCalculator">Macro Calculator</a>
+        <a href="#membership" class="nav-link" id="navLinkPricing">Memberships</a>
+        <a href="#trainers" class="nav-link" id="navLinkTrainers">Coaches</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="audio-toggle-btn" id="audioToggleBtn" title="Toggle Futuristic Ambient Audio Feedback" aria-label="Toggle Sound">
+          <span class="audio-icon">🔊</span>
+          <span class="audio-label">FX ON</span>
+        </button>
+        <a href="#membership" class="btn btn-primary btn-glow" id="navCtaBtn">
+          <span>CLAIM 7-DAY VIP PASS</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- UNIQUE BIOMECHANICAL HUD HERO SECTION -->
+    <section class="hero-section hero-hud-mode" id="hero">
+      <!-- Interactive Chalk & Ember Particle Canvas -->
+      <canvas id="heroParticleCanvas" class="hero-particle-canvas"></canvas>
+
+      <!-- Biomechanical Background Grid & Coordinates -->
+      <div class="hud-grid-overlay"></div>
+      <div class="hud-crosshair crosshair-top-left">+</div>
+      <div class="hud-crosshair crosshair-top-right">+</div>
+      <div class="hud-crosshair crosshair-bottom-left">+</div>
+      <div class="hud-crosshair crosshair-bottom-right">+</div>
+      <div class="hud-coordinate-label">LAT 40.7128° N // LON 74.0060° W [APEX_SECTOR_01]</div>
+
+      <!-- Training Mode Selector Deck -->
+      <div class="hero-mode-bar">
+        <span class="mode-bar-label">SYSTEM PROTOCOL:</span>
+        <div class="mode-tabs" id="heroModeTabs">
+          <button class="mode-tab-btn active" data-mode="hypertrophy">
+            <span class="mode-index">01</span>
+            <span class="mode-name">HYPERTROPHY // PUMP</span>
+          </button>
+          <button class="mode-tab-btn" data-mode="powerlifting">
+            <span class="mode-index">02</span>
+            <span class="mode-name">POWERLIFTING // LOAD</span>
+          </button>
+          <button class="mode-tab-btn" data-mode="recovery">
+            <span class="mode-index">03</span>
+            <span class="mode-name">BIO-RECOVERY // CRYO</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-container">
+        <!-- Hero Left / Dynamic HUD Content -->
+        <div class="hero-content">
+          <div class="hero-badge" id="heroStatusBadge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text" id="heroStatusText">PROTOCOL 01 ACTIVE • HYPERTROPHY OVERLOAD</span>
+          </div>
+          
+          <h1 class="hero-title" id="heroDynamicTitle">
+            FORGED IN <br>
+            <span class="text-gradient">MECHANICAL TENSION.</span><br>
+            UNSTOPPABLE.
+          </h1>
+
+          <p class="hero-subtitle" id="heroDynamicSubtitle">
+            Welcome to the premier biomechanical athletic facility. Engineered for hypertrophy-obsessed lifters and high-performance humans who refuse mediocrity.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#membership" class="btn btn-primary btn-large btn-glow" id="heroPrimaryCta">
+              <span>CLAIM 7-DAY VIP PASS</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn btn-secondary btn-large" id="btnNeuralDrive">
+              <span class="neural-pulse-icon">⚡</span>
+              <span>IGNITE NEURAL DRIVE</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Live Telemetry Metrics Row -->
+          <div class="hero-stats-row hero-hud-stats" id="heroHudStats">
+            <div class="stat-item">
+              <span class="stat-num" id="statMetric1">98.4%</span>
+              <span class="stat-label" id="statLabel1">Fiber Recruitment</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" id="statMetric2">164 <small>BPM</small></span>
+              <span class="stat-label" id="statLabel2">Heart Rate Peak</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" id="statMetric3">75 <small>SEC</small></span>
+              <span class="stat-label" id="statLabel3">Rest Interval</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num text-red" id="statMetric4">TIER-1</span>
+              <span class="stat-label" id="statLabel4">Biometric Pass</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right / Visual Stage with Layered Depth & Circular HUD -->
+        <div class="hero-visual-stage" id="heroVisualStage">
+          <!-- 3D Layered Depth Typography Behind Athlete -->
+          <div class="hero-depth-typography" aria-hidden="true">
+            <span class="depth-text" id="depthTitle">IRONPULSE</span>
+            <span class="depth-subtext">01 // APEX FORGE</span>
+          </div>
+
+          <div class="hero-card-3d" id="heroCard3D">
+            <!-- Athlete Image Container -->
+            <div class="hero-image-wrapper">
+              <img src="assets/images/hero_athlete.jpg" alt="Athletes training intensely with weights and battle ropes at IRONPULSE" class="hero-img" id="heroMainImage" fetchpriority="high">
+              <div class="hero-img-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Marquee Ticker -->
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          <span>HYPERTROPHY ARCHITECTURE</span> •
+          <span>OLYMPIC BARBELL VAULT</span> •
+          <span>CRYOTHERAPY &amp; INFRARED</span> •
+          <span>BIOMETRIC HEART-RATE HUD</span> •
+          <span>HIGH-VELOCITY SPRINT TURF</span> •
+          <span>24/7 BIOMETRIC KEYLESS ACCESS</span> •
+          <span>ZERO CELLULAR DEAD ZONES</span> •
+          <span>HYPERTROPHY ARCHITECTURE</span> •
+          <span>OLYMPIC BARBELL VAULT</span> •
+          <span>CRYOTHERAPY &amp; INFRARED</span> •
+          <span>BIOMETRIC HEART-RATE HUD</span> •
+          <span>HIGH-VELOCITY SPRINT TURF</span> •
+          <span>24/7 BIOMETRIC KEYLESS ACCESS</span> •
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FACILITIES SHOWCASE (Gemini AI Gallery) -->
+    <section class="section facilities-section" id="facilities">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">WORLD-CLASS INFRASTRUCTURE</span>
+          <h2 class="section-title">BUILT FOR THOSE WHO <span class="text-lime">TRAIN HEAVY</span></h2>
+          <p class="section-desc">Experience 15,000 square feet of curated biomechanical equipment, calibrated competition plates, and clinical-grade recovery facilities.</p>
+        </div>
+
+        <div class="facility-tabs" id="facilityTabs">
+          <button class="facility-tab-btn active" data-zone="iron">
+            <span class="tab-index">01</span>
+            <span class="tab-title">The Iron Vault</span>
+          </button>
+          <button class="facility-tab-btn" data-zone="cardio">
+            <span class="tab-index">02</span>
+            <span class="tab-title">Velocity Turf &amp; Cardio</span>
+          </button>
+          <button class="facility-tab-btn" data-zone="recovery">
+            <span class="tab-index">03</span>
+            <span class="tab-title">Cryo &amp; Bio-Recovery</span>
+          </button>
+        </div>
+
+        <div class="facility-display-card" id="facilityDisplayCard">
+          <div class="facility-visual">
+            <img src="assets/images/iron_vault.jpg" alt="The Iron Vault at IRONPULSE" class="facility-img" id="facilityActiveImg">
+            <div class="facility-badge-overlay" id="facilityZoneBadge">ZONE 01 // HEAVY LIFTING</div>
+          </div>
+          <div class="facility-details">
+            <div class="facility-tag" id="facilityTag">OLYMPIC &amp; HYPERTROPHY</div>
+            <h3 class="facility-name" id="facilityName">THE IRON VAULT</h3>
+            <p class="facility-info" id="facilityDesc">
+              Equipped with calibrated steel competition plates, 12 custom power cages, monolifts, dumbbell racks spanning from 5 lbs to 200 lbs, and dedicated deadlift platforms with noise-damping acoustic rubber.
+            </p>
+            <ul class="facility-perks" id="facilityPerks">
+              <li><span>✓</span> Eleiko &amp; Rogue Calibrated Competition Barbells</li>
+              <li><span>✓</span> Custom Matte Black Dumbbells up to 200 lbs</li>
+              <li><span>✓</span> Dual Cable Crossover &amp; Jammer Arm Rigs</li>
+              <li><span>✓</span> Chalk Stations &amp; Full Olympic Lifting Platforms</li>
+            </ul>
+            <button class="btn btn-primary btn-glow open-vip-modal" data-pref="Iron Vault">
+              <span>BOOK AN IN-PERSON WALKTHROUGH</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TRAINING PROGRAMS EXPLORER -->
+    <section class="section programs-section" id="programs">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="header-left">
+            <span class="section-eyebrow">ELITE TRAINING REGIMENS</span>
+            <h2 class="section-title">TARGETED <span class="text-gradient">PROGRAMMING</span></h2>
+          </div>
+          <p class="section-desc">Scientifically structured periodization cycles built to shatter plateaus, optimize hormonal response, and trigger radical physical adaptation.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar" id="programFilterBar">
+          <button class="filter-btn active" data-filter="all">All Programs</button>
+          <button class="filter-btn" data-filter="hypertrophy">Hypertrophy</button>
+          <button class="filter-btn" data-filter="power">Strength &amp; Power</button>
+          <button class="filter-btn" data-filter="conditioning">Conditioning</button>
+        </div>
+
+        <!-- Program Cards Grid -->
+        <div class="programs-grid" id="programsGrid">
+          <!-- Card 1 -->
+          <div class="program-card" data-category="hypertrophy">
+            <div class="program-card-header">
+              <span class="program-type">HYPERTROPHY</span>
+              <span class="intensity-tag high">EXTREME INTENSITY</span>
+            </div>
+            <h3 class="program-title">Anabolic Hypertrophy 5.0</h3>
+            <p class="program-desc">High volume, mechanical tension, and intra-set metabolic fatigue designed for maximal muscle cross-sectional growth.</p>
+            <div class="program-meta">
+              <div class="meta-item">
+                <span class="meta-label">Duration</span>
+                <span class="meta-val">12 Weeks</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Frequency</span>
+                <span class="meta-val">5 Days / Wk</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Calorie Burn</span>
+                <span class="meta-val">720 kcal/day</span>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-full open-vip-modal" data-pref="Anabolic Hypertrophy">SELECT PROGRAM</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="program-card featured" data-category="power">
+            <div class="featured-ribbon">MOST POPULAR</div>
+            <div class="program-card-header">
+              <span class="program-type">POWERLIFTING</span>
+              <span class="intensity-tag max">MAX LOAD</span>
+            </div>
+            <h3 class="program-title">Titan Raw Strength</h3>
+            <p class="program-desc">Linear periodization focusing on squat, bench press, deadlift, and accessory compound movements to skyrocket your total.</p>
+            <div class="program-meta">
+              <div class="meta-item">
+                <span class="meta-label">Duration</span>
+                <span class="meta-val">16 Weeks</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Frequency</span>
+                <span class="meta-val">4 Days / Wk</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">PR Expected</span>
+                <span class="meta-val">+45 LBS Total</span>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-full btn-glow open-vip-modal" data-pref="Titan Raw Strength">SELECT PROGRAM</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="program-card" data-category="conditioning">
+            <div class="program-card-header">
+              <span class="program-type">METABOLIC</span>
+              <span class="intensity-tag high">VO2 MAX</span>
+            </div>
+            <h3 class="program-title">Shed &amp; Shred Velocity</h3>
+            <p class="program-desc">Assault bike sprints, sled pushes, kettlebell complexes, and lactate-threshold circuits for lean muscular definition.</p>
+            <div class="program-meta">
+              <div class="meta-item">
+                <span class="meta-label">Duration</span>
+                <span class="meta-val">8 Weeks</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Frequency</span>
+                <span class="meta-val">4 Days / Wk</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Calorie Burn</span>
+                <span class="meta-val">900+ kcal/day</span>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-full open-vip-modal" data-pref="Shed & Shred Velocity">SELECT PROGRAM</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE FITNESS & MACRO CALCULATOR -->
+    <section class="section calculator-section" id="calculator">
+      <div class="section-container">
+        <div class="calc-grid">
+          <!-- Calculator Controls -->
+          <div class="calc-form-card">
+            <div class="badge-pill">BIOMETRIC ENGINE v2.6</div>
+            <h2 class="calc-title">CUSTOM MACRO &amp; <br><span class="text-lime">CALORIC ENGINE</span></h2>
+            <p class="calc-desc">Input your biometric parameters to instantly calculate your Total Daily Energy Expenditure (TDEE) and optimal protein targets.</p>
+
+            <form id="fitnessCalcForm" class="calc-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calcGender">Gender</label>
+                  <select id="calcGender" class="form-select">
+                    <option value="male" selected>Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="calcAge">Age (Years)</label>
+                  <input type="number" id="calcAge" class="form-input" value="26" min="16" max="90">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calcWeight">Weight (kg)</label>
+                  <input type="number" id="calcWeight" class="form-input" value="82" min="40" max="220">
+                </div>
+                <div class="form-group">
+                  <label for="calcHeight">Height (cm)</label>
+                  <input type="number" id="calcHeight" class="form-input" value="180" min="130" max="230">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="calcActivity">Activity Level</label>
+                <select id="calcActivity" class="form-select">
+                  <option value="1.375">Light (1-2 gym sessions/week)</option>
+                  <option value="1.55" selected>Moderate (3-5 intense lifting days)</option>
+                  <option value="1.725">Heavy Athlete (6-7 days intense lifts + cardio)</option>
+                  <option value="1.9">Pro Athlete / 2x Daily Training</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="calcGoal">Primary Goal</label>
+                <div class="goal-toggle-group">
+                  <button type="button" class="goal-btn" data-goal="cut">Aggressive Cut</button>
+                  <button type="button" class="goal-btn active" data-goal="recomp">Lean Recomp</button>
+                  <button type="button" class="goal-btn" data-goal="bulk">Clean Bulk</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full btn-glow" id="calcSubmitBtn">
+                <span>COMPUTE ATHLETIC BLUEPRINT</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Calculator Results HUD -->
+          <div class="calc-results-card">
+            <div class="results-hud-header">
+              <span class="hud-status"><span class="pulse-dot"></span> LIVE CALCULATION</span>
+              <span class="hud-id">BIO-INDEX #8841</span>
+            </div>
+
+            <div class="results-primary">
+              <div class="target-calorie-box">
+                <span class="cal-title">DAILY TARGET ENERGY</span>
+                <div class="cal-display">
+                  <span class="cal-number" id="resCalories">2,650</span>
+                  <span class="cal-unit">KCAL / DAY</span>
+                </div>
+                <span class="cal-note" id="resGoalNote">Optimized for Lean Muscle Retention &amp; Steady Fat Oxidation</span>
+              </div>
+            </div>
+
+            <div class="macro-breakdown">
+              <h4 class="macro-title">RECOMMENDED DAILY MACROS</h4>
+              
+              <!-- Protein -->
+              <div class="macro-item">
+                <div class="macro-labels">
+                  <span class="macro-name text-lime">PROTEIN (HIGH ANABOLIC)</span>
+                  <span class="macro-val" id="resProtein">180g (720 kcal)</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar bar-lime" id="barProtein" style="width: 32%;"></div>
+                </div>
+              </div>
+
+              <!-- Carbs -->
+              <div class="macro-item">
+                <div class="macro-labels">
+                  <span class="macro-name text-cyan">CARBOHYDRATES (GLYCOGEN FUEL)</span>
+                  <span class="macro-val" id="resCarbs">285g (1,140 kcal)</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar bar-cyan" id="barCarbs" style="width: 48%;"></div>
+                </div>
+              </div>
+
+              <!-- Fats -->
+              <div class="macro-item">
+                <div class="macro-labels">
+                  <span class="macro-name text-crimson">HEALTHY FATS (HORMONE BALANCE)</span>
+                  <span class="macro-val" id="resFats">65g (585 kcal)</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar bar-crimson" id="barFats" style="width: 20%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Suggested Program Match -->
+            <div class="recommended-match-box">
+              <div class="match-icon">🎯</div>
+              <div class="match-info">
+                <span class="match-label">RECOMMENDED CLUB PROGRAM</span>
+                <span class="match-name" id="resProgramMatch">Anabolic Hypertrophy 5.0</span>
+              </div>
+              <button class="btn btn-sm btn-outline open-vip-modal" id="btnMatchCta">APPLY TO PASS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: MEMBERSHIP TIERS -->
+    <section class="section pricing-section" id="membership">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">NO CONTRACTS • ZERO COMPROMISE</span>
+          <h2 class="section-title">CHOOSE YOUR <span class="text-lime">MEMBERSHIP</span></h2>
+          <p class="section-desc">Strictly limited membership roster to guarantee zero wait times for squat racks, platforms, and recovery suites.</p>
+
+          <!-- Billing Toggle -->
+          <div class="billing-toggle-container">
+            <span class="toggle-label" id="monthlyLabel">Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="billingToggle">
+              <span class="slider round"></span>
+            </label>
+            <span class="toggle-label active" id="annualLabel">Annual <span class="discount-pill">SAVE 20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan 1 -->
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">IRON STANDARD</h3>
+              <p class="plan-desc">For the dedicated solo lifter focused on barbell and hypertrophy essentials.</p>
+            </div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-monthly="89" data-annual="69">69</span>
+              <span class="frequency">/ month</span>
+            </div>
+            <ul class="plan-features">
+              <li><span>✓</span> Full 24/7 Access to The Iron Vault</li>
+              <li><span>✓</span> Free Weights up to 200 lbs</li>
+              <li><span>✓</span> Locker &amp; Rain Shower Access</li>
+              <li><span>✓</span> Biometric Keyless Entry</li>
+              <li class="disabled"><span>✕</span> Cold Plunge &amp; Cryo Lounge</li>
+              <li class="disabled"><span>✕</span> 1-on-1 Biometric Coach Session</li>
+            </ul>
+            <button class="btn btn-outline btn-full open-vip-modal" data-pref="Iron Standard Tier">CLAIM 7-DAY TRIAL</button>
+          </div>
+
+          <!-- Plan 2 (Featured) -->
+          <div class="pricing-card featured-plan">
+            <div class="featured-badge">MOST POPULAR</div>
+            <div class="plan-header">
+              <h3 class="plan-name">PRO ATHLETE</h3>
+              <p class="plan-desc">Everything needed for extreme performance, biometrics, and recovery.</p>
+            </div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-monthly="149" data-annual="119">119</span>
+              <span class="frequency">/ month</span>
+            </div>
+            <ul class="plan-features">
+              <li><span>✓</span> All Iron Standard Access 24/7</li>
+              <li><span>✓</span> Unlimited Cold Plunge &amp; Infrared Sauna</li>
+              <li><span>✓</span> Velocity Sprint Turf &amp; Curved Treadmills</li>
+              <li><span>✓</span> Monthly InBody 770 Body Composition Scan</li>
+              <li><span>✓</span> Free Guest Pass (2x / Month)</li>
+              <li class="disabled"><span>✕</span> Dedicated Private Locker &amp; Laundry</li>
+            </ul>
+            <button class="btn btn-primary btn-full btn-glow open-vip-modal" data-pref="Pro Athlete Tier">CLAIM 7-DAY TRIAL</button>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">TITAN BLACK VIP</h3>
+              <p class="plan-desc">The pinnacle of luxury fitness with full concierge recovery and private amenities.</p>
+            </div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-monthly="249" data-annual="199">199</span>
+              <span class="frequency">/ month</span>
+            </div>
+            <ul class="plan-features">
+              <li><span>✓</span> Everything in Pro Athlete + All Club Access</li>
+              <li><span>✓</span> Weekly 1-on-1 Biomechanical Coach Session</li>
+              <li><span>✓</span> Unlimited Cryotherapy Chamber Sessions</li>
+              <li><span>✓</span> Private VIP Locker with Daily Laundry Service</li>
+              <li><span>✓</span> Complimentary Pre-workout &amp; Protein Bar</li>
+              <li><span>✓</span> Unlimited Guest Privileges</li>
+            </ul>
+            <button class="btn btn-outline btn-full open-vip-modal" data-pref="Titan Black VIP Tier">CLAIM 7-DAY TRIAL</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ELITE COACHES -->
+    <section class="section trainers-section" id="trainers">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">MASTER PRACTITIONERS</span>
+          <h2 class="section-title">THE <span class="text-gradient">COACHING ROSTER</span></h2>
+          <p class="section-desc">Coached by world-record holders, exercise scientists, and Olympic strength specialists.</p>
+        </div>
+
+        <div class="trainers-grid">
+          <!-- Trainer 1 -->
+          <div class="trainer-card">
+            <div class="trainer-avatar-box">
+              <div class="trainer-initials">MR</div>
+              <div class="trainer-status-dot"></div>
+            </div>
+            <div class="trainer-info">
+              <h3 class="trainer-name">Marcus "The Forge" Reynolds</h3>
+              <span class="trainer-role text-lime">Head of Hypertrophy &amp; Power</span>
+              <p class="trainer-bio">Former national powerlifting champion with 14 years specializing in biomechanical overload and tendon resilience.</p>
+              <div class="trainer-stats">
+                <div class="t-stat"><span>PR Total</span><strong>1,920 LBS</strong></div>
+                <div class="t-stat"><span>Athletes</span><strong>450+</strong></div>
+              </div>
+              <button class="btn btn-sm btn-outline btn-full open-vip-modal" data-pref="Coach Marcus">BOOK CONSULTATION</button>
+            </div>
+          </div>
+
+          <!-- Trainer 2 -->
+          <div class="trainer-card">
+            <div class="trainer-avatar-box">
+              <div class="trainer-initials">SK</div>
+              <div class="trainer-status-dot"></div>
+            </div>
+            <div class="trainer-info">
+              <h3 class="trainer-name">Sasha "Valkyrie" Kim</h3>
+              <span class="trainer-role text-cyan">Director of Metabolic &amp; Sprint Performance</span>
+              <p class="trainer-bio">D1 Track &amp; Field conditioning veteran. Master of lactate buffering, sprint mechanics, and heart rate zone periodization.</p>
+              <div class="trainer-stats">
+                <div class="t-stat"><span>Vo2 Max</span><strong>68 mL/kg</strong></div>
+                <div class="t-stat"><span>Athletes</span><strong>320+</strong></div>
+              </div>
+              <button class="btn btn-sm btn-outline btn-full open-vip-modal" data-pref="Coach Sasha">BOOK CONSULTATION</button>
+            </div>
+          </div>
+
+          <!-- Trainer 3 -->
+          <div class="trainer-card">
+            <div class="trainer-avatar-box">
+              <div class="trainer-initials">DL</div>
+              <div class="trainer-status-dot"></div>
+            </div>
+            <div class="trainer-info">
+              <h3 class="trainer-name">Dr. Damon Vance, DPT</h3>
+              <span class="trainer-role text-crimson">Physiologist &amp; Cryo-Recovery Lead</span>
+              <p class="trainer-bio">Doctor of Physical Therapy and certified strength coach. Specializes in neuromuscular activation and hyperbaric recovery.</p>
+              <div class="trainer-stats">
+                <div class="t-stat"><span>Credentials</span><strong>DPT, CSCS</strong></div>
+                <div class="t-stat"><span>Recovery</span><strong>100%</strong></div>
+              </div>
+              <button class="btn btn-sm btn-outline btn-full open-vip-modal" data-pref="Dr. Vance">BOOK CONSULTATION</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CALL TO ACTION BANNER -->
+    <section class="section cta-banner-section">
+      <div class="section-container">
+        <div class="cta-card">
+          <div class="cta-glow"></div>
+          <div class="cta-content">
+            <span class="badge-pill">LIMITED TO 300 MEMBERS WORLDWIDE</span>
+            <h2 class="cta-title">STOP WAITING FOR MOTIVATION.<br><span class="text-lime">START THE OBSESSION.</span></h2>
+            <p class="cta-text">Experience the difference of zero waiting, elite equipment, and pure athletic dedication. Your 7-day complimentary pass is available now.</p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary btn-large btn-glow open-vip-modal" data-pref="Banner CTA">
+                <span>CLAIM YOUR 7-DAY VIP PASS NOW</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">IRON<span class="text-lime">PULSE</span></span>
+          <span class="logo-badge">ELITE</span>
+        </a>
+        <p class="footer-tagline">Engineered for the relentless. An uncompromising luxury athletic playground built for hypertrophy, power, and human optimization.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+          <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+          <a href="#" class="social-icon" aria-label="Twitter">X</a>
+          <a href="#" class="social-icon" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">ARENAS</h4>
+        <ul class="footer-links">
+          <li><a href="#facilities">The Iron Vault</a></li>
+          <li><a href="#facilities">Velocity Turf</a></li>
+          <li><a href="#facilities">Cryo-Recovery Lounge</a></li>
+          <li><a href="#facilities">Cardio Telemetry Deck</a></li>
+          <li><a href="#facilities">Private Posing Room</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">PERFORMANCE</h4>
+        <ul class="footer-links">
+          <li><a href="#programs">Hypertrophy 5.0</a></li>
+          <li><a href="#programs">Titan Raw Strength</a></li>
+          <li><a href="#programs">Shed &amp; Shred Velocity</a></li>
+          <li><a href="#calculator">Macro Calculator</a></li>
+          <li><a href="#membership">Membership Options</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">HOURS &amp; ACCESS</h4>
+        <p class="footer-info-text">
+          <strong>Biometric Access:</strong><br>
+          Open 24 Hours / 365 Days
+        </p>
+        <p class="footer-info-text">
+          <strong>Staffed Coaching Hours:</strong><br>
+          Mon - Fri: 5:00 AM - 11:00 PM<br>
+          Sat - Sun: 7:00 AM - 9:00 PM
+        </p>
+        <p class="footer-info-text">
+          <strong>Location:</strong><br>
+          400 Apex Boulevard, District 7
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>© 2026 IRONPULSE ELITE ATHLETICS. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Biometric Service</a>
+          <a href="#">Safety Protocols</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
